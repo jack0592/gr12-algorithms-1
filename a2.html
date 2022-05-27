@@ -8,7 +8,7 @@
 <div id="questions"></div>
 <script>
     'use strict'
-    
+    // Q1
     // Single Question Example
     renderQuestion("Enter in a number.", function(print, ans) {
         let answerPlusOne = ans + 1
@@ -16,7 +16,7 @@
         print("Probably not the result you expected.")
 
     })
-    // Q1
+    // Q2
     renderQuestion("Enter in a number between 1 or 10.", function(print, ans) {
         let myNum = Number(ans) 
         if (isNaN(myNum)) {
@@ -32,7 +32,7 @@
         print(myNum + 1)
 
     })  
-
+        // Q3
     renderQuestion("Do you have a promo code?", function(print, ans) {
         //  Set a new variable to the lowercase representation of their answer
         ans = ans.toLowerCase()
@@ -60,8 +60,6 @@
         print(isPromo)
 
     })  
-
-    // Q1
 
 
 </script>
