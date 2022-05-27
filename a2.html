@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Algorithms Assignment #2</title>
+<script src="lib.js"></script>
+</head>
+<body>
+<div id="questions"></div>
+<script>
+    'use strict'
+    
+    // Single Question Example
+    renderQuestion("Enter in a number.", function(print, ans) {
+        let answerPlusOne = ans + 1
+        print(`Your answer plus one is ${answerPlusOne}.`)
+        print("Probably not the result you expected.")
+
+    })
+    // Q1
+    renderQuestion("Enter in a number between 1 or 10.", function(print, ans) {
+        let myNum = Number(ans) 
+        if (isNaN(myNum)) {
+            print('here is no number') 
+            return 
+        }
+
+        if (myNum < 1 || myNum > 10) {
+            print ("not between 1 or 10") 
+            return 
+        }
+
+        print(myNum + 1)
+
+    })  
+
+    renderQuestion("Do you have a promo code?", function(print, ans) {
+        //  Set a new variable to the lowercase representation of their answer
+        ans = ans.toLowerCase()
+        let isPromo 
+
+        // If answer in lowercase is 'yes' or 'y':
+        //     Set isPromo to true
+        if (ans == "yes" || ans == "y") {
+            isPromo = false
+        }
+
+        // Else if answer in lowercase is 'no' or 'n':
+        //     Set isPromo to false
+        else if (ans == "no" || ans =="n"){
+            isPromo = true
+        }
+
+        // Else:
+        //     Print an error message
+        else {
+            print("answer is error")
+        }
+            
+        // To see if it worked, print the value of isPromo
+        print(isPromo)
+
+    })  
+
+    // Q1
+
+
+</script>
+</body>
+</html>
